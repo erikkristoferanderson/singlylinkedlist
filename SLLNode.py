@@ -11,7 +11,11 @@ class SLLNode:
         self.next_node = next_node
 
     def __str__(self):
-        s = "Node with value {} and next node: {}.".format(self.value, self.next_node)
+        s = "Node with value {} and ".format(self.value)
+        if not self.next_node:
+            s += "no next node"
+        else:
+            s += "next node has value {}.".format(self.next_node.value)
         return s
 
 
