@@ -11,7 +11,7 @@ class SLLNode:
         self.next_node = next_node
 
     def __str__(self):
-        s = "Node with value {} and next node {}.".format(self.value, self.next_node)
+        s = "Node with value {} and next node: {}.".format(self.value, self.next_node)
         return s
 
 
@@ -20,3 +20,10 @@ if __name__ == "__main__":
     node = SLLNode(7, None)
     print()
     print(node)
+
+    my_node = SLLNode(8, None)
+    print(my_node)
+
+    second_node = SLLNode(27, None)
+    first_node = SLLNode(14, second_node)
+    print(first_node)
